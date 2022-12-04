@@ -23,9 +23,11 @@ public class FlightTest {
 
     @Before
     public void before() {
+        
         CabinCrewMember cabinCrewMember1 = new CabinCrewMember("Anne", Rank.FLIGHT_ATTENDANT);
         CabinCrewMember cabinCrewMember2 = new CabinCrewMember("Joseph", Rank.PURSER);
         pilot = new Pilot("James", Rank.FIRST_OFFICER, "12345FA");
+
         ArrayList<CabinCrewMember> cabinCrewMembers = new ArrayList<>();
 
         cabinCrewMembers.add(cabinCrewMember1);
@@ -34,11 +36,7 @@ public class FlightTest {
 
         ArrayList<Passenger>passengers = new ArrayList<>();
 
-
-
-
         flight = new Flight("JA7579", "EDI", "ORY", "11:00", plane.AIRBUS_A_380, pilot, cabinCrewMembers, passengers);
-
 
     }
 
