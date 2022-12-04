@@ -11,11 +11,11 @@ public class FlightTest {
 //
 //    Passenger passenger;
 //
-//    Plane plane;
+    Plane plane;
 
     @Before
     public void before() {
-        flight = new Flight("JA7579", "EDI", "ORY", "11:00");
+        flight = new Flight("JA7579", "EDI", "ORY", "11:00", plane.AIRBUS_A_380);
     }
 
     @Test
@@ -24,7 +24,7 @@ public class FlightTest {
     }
 
     @Test
-    public void flightHasdepartureAirport() {
+    public void flightHasDepartureAirport() {
         assertEquals("EDI", flight.getDepartureAirport());
     }
 
@@ -36,6 +36,21 @@ public class FlightTest {
     @Test
     public void flightHasDepartureTime() {
         assertEquals("11:00", flight.getDepartureTime());
+    }
+
+    @Test
+    public void flightHasPlaneType() {
+        assertEquals(plane.AIRBUS_A_380, flight.getPlaneType());
+    }
+
+    @Test
+    public void flightHasCapacity() {
+        assertEquals(500, flight.getPlaneType().getCapacity());
+    }
+
+    @Test
+    public void flightHasWeight() {
+        assertEquals(290000, flight.getPlaneType().getTotalWeight(),0.0);
     }
 
 

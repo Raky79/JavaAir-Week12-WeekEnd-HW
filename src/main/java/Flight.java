@@ -7,11 +7,15 @@ public class Flight {
 
     private String departureTime;
 
-    public Flight(String flightNumber, String departureAirport, String destinationAirport, String departureTime) {
+    private Plane plane;
+
+
+    public Flight(String flightNumber, String departureAirport, String destinationAirport, String departureTime, Plane plane) {
         this.flightNumber = flightNumber;
         this.departureAirport = departureAirport;
         this.destinationAirport = destinationAirport;
         this.departureTime = departureTime;
+        this.plane = plane;
     }
 
     public String getFlightNumber() {
@@ -28,5 +32,9 @@ public class Flight {
 
     public String getDepartureTime() {
         return departureTime;
+    }
+
+    public Plane getPlaneType() {
+        return this.plane;
     }
 }
