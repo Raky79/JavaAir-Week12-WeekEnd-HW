@@ -7,15 +7,20 @@ public class FlightTest {
 
     Flight flight;
 //
-//    Pilot pilot;
+    Pilot pilot;
 //
 //    Passenger passenger;
 //
     Plane plane;
 
+    CabinCrewMember cabinCrewMember;
+
+    Rank rank;
+
     @Before
     public void before() {
-        flight = new Flight("JA7579", "EDI", "ORY", "11:00", plane.AIRBUS_A_380);
+        pilot = new Pilot("James", Rank.FIRST_OFFICER, "12345FA");
+        flight = new Flight("JA7579", "EDI", "ORY", "11:00", plane.AIRBUS_A_380, pilot);
     }
 
     @Test
@@ -51,6 +56,11 @@ public class FlightTest {
     @Test
     public void flightHasWeight() {
         assertEquals(290000, flight.getPlaneType().getTotalWeight(),0.0);
+    }
+
+    @Test
+    public void flightHasAPilot() {
+        assertEquals(pilot, flight.getPilot());
     }
 
 

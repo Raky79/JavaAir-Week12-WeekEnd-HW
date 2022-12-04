@@ -9,13 +9,16 @@ public class Flight {
 
     private Plane plane;
 
+    private Pilot pilot;
 
-    public Flight(String flightNumber, String departureAirport, String destinationAirport, String departureTime, Plane plane) {
+
+    public Flight(String flightNumber, String departureAirport, String destinationAirport, String departureTime, Plane plane, Pilot pilot) {
         this.flightNumber = flightNumber;
         this.departureAirport = departureAirport;
         this.destinationAirport = destinationAirport;
         this.departureTime = departureTime;
         this.plane = plane;
+        this.pilot = pilot;
     }
 
     public String getFlightNumber() {
@@ -36,5 +39,9 @@ public class Flight {
 
     public Plane getPlaneType() {
         return this.plane;
+    }
+
+    public Pilot getPilot() {
+        return pilot;
     }
 }
