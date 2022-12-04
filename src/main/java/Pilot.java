@@ -10,4 +10,9 @@ public class Pilot extends CabinCrewMember{
     public String getPilotLicence() {
         return pilotLicence;
     }
+
+    public String pilotFlyPlane() {
+        return String.format("Vroom, Vroom");
+    }
 }
+
